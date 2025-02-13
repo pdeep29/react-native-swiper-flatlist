@@ -59,7 +59,7 @@ export const SwiperFlatList = React.forwardRef(
       paginationAccessibilityLabels,
 
       //customProps
-      customHeight, customWidth
+      customHeight, customWidth,
       ...props
     }: SwiperFlatListProps<T1>,
     ref: React.Ref<SwiperFlatListRefProps>,
