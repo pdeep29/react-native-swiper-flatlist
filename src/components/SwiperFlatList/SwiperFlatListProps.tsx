@@ -157,6 +157,13 @@ export type SwiperFlatListProps<T> = Partial<FlatListProps<T>> & {
    * This is optional and used for screen readers.
    */
   paginationAccessibilityLabels?: string[];
+  /**
+   * Custom Props
+   */
+
+  customHeight?: number;
+  
+  customWidth?: number;
 } & Pick<
     PaginationProps,
     | 'paginationActiveColor'
