@@ -57,6 +57,9 @@ export const SwiperFlatList = React.forwardRef(
       disableGesture = false,
       e2eID,
       paginationAccessibilityLabels,
+
+      //customProps
+      customHeight, customWidth
       ...props
     }: SwiperFlatListProps<T1>,
     ref: React.Ref<SwiperFlatListRefProps>,
@@ -267,8 +270,8 @@ export const SwiperFlatList = React.forwardRef(
     };
 
     const { width, height } = useWindowDimensions();
-    if (props.getItemLayout === undefined) {
-      const itemDimension = vertical ? height : width;
+    if (props.getItemLayout === undefined) { 
+      const itemDimension = vertical ? customHeight ? customHeight :height : customWidth ? customWidth :  width;
       flatListProps.getItemLayout = (__data, ItemIndex: number) => ({
         length: itemDimension,
         offset: itemDimension * ItemIndex,
